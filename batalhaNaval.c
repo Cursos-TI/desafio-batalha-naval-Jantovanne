@@ -29,7 +29,7 @@ printf("Digite 2 para horizontal.\n");
 scanf("%d", &verticalhorizontal);
 switch (verticalhorizontal)
 {
-case 1:
+case 1://Caso o navio seja adicionado em linha vertical.
   printf("Digite o valor referente a coluna que deseja inserir o navio:\n");
   do
   {
@@ -48,7 +48,7 @@ case 1:
   {
 printf("Opção inválida...\n");
   }
-} while ((coluna < 0) | (coluna > 9));  
+} while ((coluna < 0) | (coluna > 9));//loop de repetição para opção inválida.  
 printf("Digite o valor referente a 1° linha(de cima para baixo) que deseja inserir o navio:\n");
 printf("0 - Linha A;\n");
   printf("1 - Linha B;\n");
@@ -61,7 +61,7 @@ printf("0 - Linha A;\n");
   printf("8 - Linha I;\n");
   printf("9 - Linha J.\n");
   scanf("%d", &linha);
-if (tabuleiro[linha][coluna] == 0)
+if (tabuleiro[linha][coluna] == 0)//Teste de condição caso haja algum navio na posição que o usuário deseja inserir o novo navio.
 {
   printf("Agora digite quantas casas(em linhas) tem o navio(máximo 3):\n");
   scanf("%d", &casas);
@@ -97,9 +97,9 @@ linha++;
 
 
   break;
-  case 2:
+  case 2://Caso o navio seja inserido na posição horizontal.
   printf("Digite o valor referente a linha que deseja inserir o navio:\n");
-  do
+  do//Laço de repetição no caso de valor incorreto
   {
   printf("0 - Linha A;\n");
   printf("1 - Linha B;\n");
@@ -129,7 +129,7 @@ printf("0 - Coluna 1\n");
   printf("8 - Coluna 9;\n");
   printf("9 - Coluna 10.\n");
   scanf("%d", &coluna);
-if (tabuleiro[linha][coluna] == 0)
+if (tabuleiro[linha][coluna] == 0)//Teste de condição caso haja algum navio na posição que o usuário deseja inserir o novo navio.
 {
   printf("Agora digite quantas casas(em colunas) tem o navio(máximo 3):\n");
   scanf("%d", &casas);
